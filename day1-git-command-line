@@ -1,0 +1,5 @@
+#lets create some global varaibles you need to change my name to your name
+   501  git config --global user.name "gopal"
+  502  git config --global user.email "gopal1409@gmail.com"
+  #this will show all the global varaible list
+  503  git config --list
