@@ -3,3 +3,22 @@
   502  git config --global user.email "gopal1409@gmail.com"
   #this will show all the global varaible list
   503  git config --list
+#lets undestand git init what it do
+506  mkdir project
+  507  cd project
+#touch command will create empty file
+  508  touch DS_Store
+  509  touch auth
+  510  touch secret
+  511  touch calcy.py
+  512  ls
+  513  git status
+#to manage this folder using git you can give a command git init
+  514  git init
+  515  git status
+  516  ls -la
+#git5 init will create a folder called as .git which will be used to manage your versioing
+  517  ls .git
+#if you delete .git folder all your versioingh will be lost
+  518  rm -rf .git
+  519  git status
