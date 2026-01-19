@@ -45,3 +45,12 @@
   539  git commit -m "math function added"
 #now git log will show there are two commit 
   540  git log
+#lets generate the ssh key 
+ssh-keygen -t rsa
+###after this just press enter enter and enter
+#once key is generated look for this line
+Your public key has been saved in /c/Users/gopal/.ssh/id_rsa.pub
+##then do cat command
+cat /c/Users/gopal/.ssh/id_rsa.pub
+#this will give the public key
+select everythign and copy the key
