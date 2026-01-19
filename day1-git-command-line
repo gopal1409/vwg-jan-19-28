@@ -35,3 +35,13 @@
   530  ls
 #git log will show me the first version which we have created just now
   531  git log
+#lets make another changes
+534  echo "adding math functinality in calcy.py" >> calcy.py
+  535  git status
+#git diff will compare your code with previous commit 
+  536  git diff
+  537  cat calcy.py
+  538  git add calcy.py
+  539  git commit -m "math function added"
+#now git log will show there are two commit 
+  540  git log
