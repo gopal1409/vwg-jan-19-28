@@ -22,3 +22,16 @@
 #if you delete .git folder all your versioingh will be lost
   518  rm -rf .git
   519  git status
+#lets reintizlied it 
+  523  git init
+  524  git status
+  525  echo "we are starting with calcy project" > calcy.py
+#we will add calcy.py
+  526  git add calcy.py
+  527  git status
+#do a commit which will create my first version
+  528  git commit -m "intialized calcy project"
+  529  git status
+  530  ls
+#git log will show me the first version which we have created just now
+  531  git log
