@@ -21,3 +21,22 @@
   513  cat calcy.py
   514  git merge subtract
   515  cat calcy.py
+#lets create a conflict
+ 518  git branch
+  519  cat calcy.py
+#we are adding a new line in master branch
+  520  echo "lets create a conflict" >> calcy.py
+  521  git add calcy.py
+  522  git commit -m "conflict"
+ #then we move to subtract branch
+  528  git checkout subtract
+#on the same file we added a new line with different content
+  529  cat calcy.py
+  530  echo "testing conflict" >> calcy.py
+  531  cat calcy.py
+  532  git add calcy.py
+  533  git commit -m "conflict arise"
+#lets move to the master 
+  534  git checkout master
+#if we try to merge it it will show you the conflict
+  535  git merge subtract
