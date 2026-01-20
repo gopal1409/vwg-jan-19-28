@@ -3,17 +3,18 @@ pipeline {
     stages {
         stage('code from scm') {
             steps {
-                echo "geeting code from scm"
+               git credentialsId: 'gitkey', url: 'git@github.com:gopal1409/vw-jenkins-manifest-jan26.git'
             }
         }
         stage('mvn build') {
             steps {
-                echo "build the code"
+                sh 'mvn -B -DskipTest clean package'
             }
         }
         stage('mvn test') {
             steps {
-                echo "test the code"
+                sh 'mvn test'
+                junit 'target/surefire-reports/*.xml'
             }
         }
     }
