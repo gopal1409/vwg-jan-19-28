@@ -1,0 +1,18 @@
+#lets install maven in the jenkins machine
+  apt install maven
+  systemctl restart jenkins
+  #############clone the spring hello project
+   35  git clone https://github.com/gopal1409/spring-hello.git
+   36  cd spring-hello/
+   37  git config --global user.name "gopal"
+   38  git config --global user.email "gopal1409@gmail.com"
+   39  rm .git
+   40  rm -rf .git
+   41  git init
+   42  git add .
+   43  git commit -m "spring hello project"
+   44  git log
+  ###lets generate the ssh key and upload it in github
+  ssh-keygen -t rsa
+  ###just press enter enter and enter
+  
