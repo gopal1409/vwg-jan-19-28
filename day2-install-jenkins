@@ -1,0 +1,24 @@
+###open powershell in your windows jump machine kindly put your own dns name
+  ssh lab-user@lab-as-24539.lc.cl-labs.springpeople.com
+  #it will ask for password Welcome@123
+  #once you put the password you will login to the vm
+  sudo -i
+  ##again put the password Welcome@123
+  #now lets install jenkins
+   35  apt-get update
+   36  apt install default-jdk
+  #add the installtion jenkins file
+   37  wget -O /etc/apt/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+   38  echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+   39  apt update
+   40  apt install jenkins
+   41  systemctl status jenkins
+  #press q to come out of jenkins
+  #once jenkisn installation completed you can copy the linux machine dns in your browser change the dns name to your
+  http://lab-as-24539.lc.cl-labs.springpeople.com:8080/
+  #this will show unlock jenkins
+  #in your linux teminal 
+cat /var/lib/jenkins/secrets/initialAdminPassword
+  #copy the password and paste in the browser which will unlock jenkins
+  #then install suggested plugin
+  #then finally create a username and password and save it you will get jenkins screen
