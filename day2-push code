@@ -15,4 +15,9 @@
   ###lets generate the ssh key and upload it in github
   ssh-keygen -t rsa
   ###just press enter enter and enter
-  
+   47  cat /root/.ssh/id_rsa.pub
+#once you get the ssh key upload the same in github
+###create a new repo in your personale git hub and copy the same and paste it in your terminal
+   48  git remote add origin git@github.com:gopal1409/vw-jenkins-manifest-jan26.git
+##finally push the code to the repo
+   49  git push origin master
