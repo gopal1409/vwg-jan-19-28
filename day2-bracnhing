@@ -1,0 +1,23 @@
+ 499  cd project
+   #this will show all the branches
+  500  git branch
+   #lets create a new branch
+  501  git branch subtract
+  502  git branch
+   #to move to the branch
+  503  git checkout subtract
+  504  git branch
+   #we will add a new line in subtract branch
+  505  cat calcy.py
+  506  echo "we are developing subtract functionality" >> calcy.py
+  507  cat calcy.py
+  508  git add calcy.py
+  509  git commit -m "added subtract function"
+   #git log will show the header is in subtract branch
+  510  git log
+  511  cat calcy.py
+   #lets merge the subtract branch with master branch
+  512  git checkout master
+  513  cat calcy.py
+  514  git merge subtract
+  515  cat calcy.py
