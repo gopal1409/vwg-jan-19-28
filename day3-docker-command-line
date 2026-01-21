@@ -7,3 +7,7 @@
    90  docker images
       #next time when you create a contianer with an image it is not going to download it will spin up your contianer fdrom the local repo
    91  docker container run --detach --publish 81:80 nginx
+#how to test the container is running or not 
+curl localhost
+#or you can copy paste the linux dns name in the browser
+
