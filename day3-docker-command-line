@@ -59,4 +59,24 @@ exit
 #do 
 ls
 ##you will see an folder as employee
+#lets upgrade the db 
+ 126  docker ps
+#we will stop the db 
+  127  docker stop db
+#rtm will remove the db
+  128  docker rm db
+  129  docker ps
+#lets create the new cotnainer with a upgraded image
+ docker run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql:8.4
+  130  docker images
+#
+ #lets login inside the db and check the employee db exist or not 
+  132  docker exec -it db bash
 
+#using mysql command
+mysql -u root -p
+###check the database 
+show databases;
+##this will show the employee db exist
+exit
+exit
