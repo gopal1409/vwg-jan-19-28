@@ -1,0 +1,31 @@
+ 134  cd /root
+  135  ls
+  136  cd spring-hello/
+  137  ls
+  138  mvn clean package
+  139  ls
+   #this will show the jar file created in target directory
+  140  ls target/
+   #we are creating a docker file ensure that the docker file is always created in the root folder of your project
+  141  touch dockerfile
+   #inside our docker file we will provide instrctrion
+  142  nano dockerfile
+FROM eclipse-temurin:8u472-b08-jre-ubi9-minimal
+WORKDIR /app
+COPY ./target/spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar /app/app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app/app.jar"]
+#to save the file press ctrl x press y then press enter
+   #lets build the image -t is once the image is build this will be tagged with this name
+  143  docker build -t myapp .
+  144  docker images
+#image histroy will provide the histroy of your image where you can see the layers
+  146  docker image history myapp
+  147  docker images
+#lets create a container wityh the image 
+  149  docker container run -d -p 8081:8080 myapp
+  150  docker ps
+   #you can test the same 
+  151  curl localhost:8081/hello
+   #finally copy the dns name in the browser change my dns name to your dns name of the linux machine
+   http://lab-as-24539.lc.cl-labs.springpeople.com:8081/hello
