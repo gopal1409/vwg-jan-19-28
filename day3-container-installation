@@ -1,0 +1,7 @@
+#lets install docker 
+  sudo -i
+  #######complete step 1 and step 2 from the below metnioned site 
+  https://docs.docker.com/engine/install/ubuntu/
+###3once completed run this command which will show that docker installation is complted
+    82  docker --version
+   83  docker
