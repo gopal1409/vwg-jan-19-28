@@ -29,3 +29,17 @@ ENTRYPOINT ["java","-jar","/app/app.jar"]
   151  curl localhost:8081/hello
    #finally copy the dns name in the browser change my dns name to your dns name of the linux machine
    http://lab-as-24539.lc.cl-labs.springpeople.com:8081/hello
+#lets upload the image in hub.docker.com
+#to do the same we need to tag the image
+154  docker images
+  155  docker image tag
+#when you are taggin in place of gopal1409 #you need to put your repo name 
+  156  docker image tag myapp gopal1409/myapp
+#check that your image is now tagged with repo name
+docker login
+##########################
+copy the url paste it
+###
+paste the value also
+#####finally push the image to the repo
+docker push gopal1409/myapp
