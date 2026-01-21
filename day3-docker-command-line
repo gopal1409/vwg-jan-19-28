@@ -1,0 +1,9 @@
+#lets create our first container
+  3this will create your first cotnainer
+    88  docker container run --detach --publish 80:80 nginx
+      #docker ps will show the running container
+   89  docker ps
+      #docker images will show all the image avaialbe in your local repo
+   90  docker images
+      #next time when you create a contianer with an image it is not going to download it will spin up your contianer fdrom the local repo
+   91  docker container run --detach --publish 81:80 nginx
