@@ -10,4 +10,5 @@
 #how to test the container is running or not 
 curl localhost
 #or you can copy paste the linux dns name in the browser
-
+#lets try to understand the detach mode
+docker container run --publish 82:80 nginx
