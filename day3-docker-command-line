@@ -32,3 +32,31 @@ docker container run --publish 82:80 nginx
   109  docker ps
   110  docker stop mongo
   111  docker ps -a
+#docker volume and path 
+114  docker run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql:8
+  115  docker ps
+#container inspect will give you more information about the container
+  116  docker container inspect db
+  117  docker volume ls
+#this will show where is your volume is mapped
+
+  119  docker volume inspect mysql-db
+#this is the path where volume is mapped
+  120  cd /var/lib/docker/volumes/mysql-db/_data
+  121  ls
+#lets login inside the cotnaienr -it is interactive terminal
+  122  docker exec -it db  bash
+##3once you login inside the container
+mysql -u root -p 
+#password just press enter
+show databases;
+create database employee;
+show databases;
+#this will show that an emp databse is created 
+exit
+exit
+###once you exit the container
+#do 
+ls
+##you will see an folder as employee
+
