@@ -12,3 +12,23 @@ curl localhost
 #or you can copy paste the linux dns name in the browser
 #lets try to understand the detach mode
 docker container run --publish 82:80 nginx
+#container vs process id
+ 98  docker run --name mongo -d mongo
+   99  docker ps
+
+#docker top will show the mongo db is running as a process id 
+  102  docker top mongo
+#is the linux native command which will show the container is running as process id in your linux system
+  103  ps aux
+  104  docker top mongo
+#replace the process id with your own process id
+  105  kill -9 6680
+#now you can see the mongo db is not running
+  106  docker ps
+#this will show that mongo db is in stopped state
+  107  docker ps -a
+#you can start and stop a contianer using this below command
+  108  docker start mongo
+  109  docker ps
+  110  docker stop mongo
+  111  docker ps -a
