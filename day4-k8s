@@ -36,4 +36,8 @@ all the component of k8s are running as container.
 curl localhost
 #to exit the container 
 exit
-####################
+####################if you delete the pod 
+ 73  kubectl -n gopal get pod
+   74  kubectl -n gopal delete pod my-first-pod
+   75  kubectl -n gopal get pod
+
