@@ -21,3 +21,12 @@ all the component of k8s are running as container.
  51  kubectl get namespace
    52  kubectl create ns gopal
    53  kubectl get ns
+#lets create our first pod inside a namespace #please replace gopal with your name or the namespace you have created in earlier stages
+58  kubectl run -h
+   59  kubectl -n gopal run
+   60  kubectl -n gopal run my-first-pod --image=nginx --dry-run=client -o yaml
+   61  kubectl -n gopal run my-first-pod --image=nginx --dry-run=client -o yaml > gopal.yml
+   62  kubectl apply -f gopal.yml
+   63  kubectl get pod
+   64  kubectl -n gopal get pod
+   65  kubectl -n gopal describe pod
