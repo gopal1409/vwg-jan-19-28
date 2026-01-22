@@ -30,3 +30,10 @@ all the component of k8s are running as container.
    63  kubectl get pod
    64  kubectl -n gopal get pod
    65  kubectl -n gopal describe pod
+#if you want to login inside the pod 
+69  kubectl -n gopal get pod
+   70  kubectl -n gopal exec -it my-first-pod -- /bin/bash
+curl localhost
+#to exit the container 
+exit
+####################
