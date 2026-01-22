@@ -40,4 +40,14 @@ exit
  73  kubectl -n gopal get pod
    74  kubectl -n gopal delete pod my-first-pod
    75  kubectl -n gopal get pod
+#lets create our first deployment
+ 81  kubectl -n gopal create deployment -h
+   82  kubectl create deployment my-first-deploy --image=nginx --port=80 -n gopal --dry-run=client -o yaml
+   83  kubectl create deployment my-first-deploy --image=nginx --port=80 -n gopal --dry-run=client -o yaml > gopaldep.yml
+   84  kubectl apply -f gopaldep.yml
+   85  kubectl -n gopal get deploy
+   86  kubectl -n gopal get pod
+#replace the pod name with your name
+   87  kubectl -n gopal delete pod my-first-deploy-688d64c99c-k42cb
+   88  kubectl -n gopal get pod
 
