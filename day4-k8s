@@ -1,0 +1,8 @@
+#lets login inside k8s cluster
+  ssh@lab-as-24539.lc.cl-labs.springpeople.com
+  username: lab-user
+    password: Welcome@123
+      ###once login in the master machine
+      sudo -i
+      ###then check the master and worker node
+      kubectl get nodes
