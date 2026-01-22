@@ -6,3 +6,15 @@
       sudo -i
       ###then check the master and worker node
       kubectl get nodes
+#lets check all the master component
+ 37  kubectl get pod -A
+  
+   39  kubectl get pod -A -o wide
+#############################
+all the component of k8s are running as container. 
+#docker become obsolute you need to use crictl to do troubleshooting in your contianer engine
+42  docker ps
+   43  crictl ps
+   44  crictl images
+   45  crictl
+############################
