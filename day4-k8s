@@ -18,3 +18,6 @@ all the component of k8s are running as container.
    44  crictl images
    45  crictl
 ############################
+ 51  kubectl get namespace
+   52  kubectl create ns gopal
+   53  kubectl get ns
